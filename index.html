@@ -1,0 +1,2780 @@
+<!DOCTYPE php>
+<!-- saved from url=(0023)http://www.nitrr.ac.in/ -->
+<html xmlns="http://www.w3.org/1999/xphp"
+  class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+  style="height: 100%;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="shortcut icon" href="http://www.nitrr.ac.in/img/nitrr.ico">
+  <title>::: National Institute of Technology Raipur :::</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./Ash_files/bootstrap.css" rel="stylesheet">
+
+  <!--<script src="js/jquery.min.js"></script>-->
+  <link href="./Ash_files/normalize.css" rel="stylesheet">
+
+  <link href="./Ash_files/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Ash_files/animate.min.css">
+  <link rel="stylesheet" href="./Ash_files/owl.theme.default.css">
+  <link rel="stylesheet" href="./Ash_files/transitions.css">
+  <link rel="stylesheet" href="./Ash_files/main.css">
+  <link rel="stylesheet" href="./Ash_files/color.css">
+  <link rel="stylesheet" href="./Ash_files/responsive.css">
+  <link rel="stylesheet" href="Ash.html/my.css">
+  <link rel="stylesheet" href="ad.css">
+
+  <style>
+    .flashit {
+      color: white;
+      -webkit-animation: flash linear 1s infinite;
+      animation: flash linear 1s infinite;
+    }
+
+    @-webkit-keyframes flash {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .1;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes flash {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .1;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .read-more-state {
+      display: none;
+    }
+
+    .read-more-target {
+      opacity: 0;
+      max-height: 0;
+      font-size: 0;
+      transition: .25s ease;
+    }
+
+    .read-more-state:checked~.read-more-wrap .read-more-target {
+      opacity: 1;
+      font-size: inherit;
+      max-height: 999em;
+    }
+
+    .read-more-state~.read-more-trigger:before {
+      content: 'Show more';
+    }
+
+    .read-more-state:checked~.read-more-trigger:before {
+      content: 'Show less';
+    }
+
+    .read-more-trigger {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 .5em;
+      color: #666;
+      font-size: .9em;
+      line-height: 2;
+      border: 1px solid #ddd;
+      border-radius: .25em;
+    }
+
+    /* Other style */
+    body {
+      padding: 2%;
+    }
+
+
+
+    .demo {
+
+      padding-bottom: 5%;
+      padding-left: 35%;
+    }
+
+    html,
+    body {
+      max-width: 100vw;
+    }
+
+    .dropdown-menu>li.kopie>a {
+      padding-left: 5px;
+    }
+
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -6px;
+      margin-left: -1px;
+      -webkit-border-radius: 0 6px 6px 6px;
+      -moz-border-radius: 0 6px 6px 6px;
+      border-radius: 0 6px 6px 6px;
+    }
+
+    .dropdown-submenu>a:after {
+      border-color: transparent transparent transparent #333;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      content: " ";
+      display: block;
+      float: right;
+      height: 0;
+      margin-right: -10px;
+      margin-top: 5px;
+      width: 0;
+    }
+
+    .dropdown-submenu:hover>a:after {
+      border-left-color: #555;
+    }
+
+    .dropdown-menu>li>a:hover,
+    .dropdown-menu>.active>a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+      .navbar-nav {
+        display: inline;
+      }
+
+      .navbar-default .navbar-brand {
+        display: inline;
+      }
+
+      .navbar-default .navbar-toggle .icon-bar {
+        background-color: #1995d4;
+      }
+
+      .navbar-default .navbar-nav .dropdown-menu>li>a {
+        color: red;
+
+        border-radius: 4px;
+        margin-top: 2px;
+      }
+
+      .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #333;
+      }
+
+      .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+      .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+        background: red;
+      }
+
+      .navbar-nav .open .dropdown-menu {
+        border-bottom: 1px solid white;
+        border-radius: 0;
+      }
+
+      .dropdown-menu {
+        padding-left: 10px;
+      }
+
+      .dropdown-menu .dropdown-menu {
+        padding-left: 20px;
+      }
+
+      .dropdown-menu .dropdown-menu .dropdown-menu {
+        padding-left: 30px;
+      }
+
+      li.dropdown.open {
+        border: 0px solid red;
+      }
+
+    }
+
+    @media (min-width: 768px) {
+      ul.nav li:hover>ul.dropdown-menu {
+        display: block;
+      }
+
+      #navbar {
+        text-align: center;
+      }
+    }
+
+    @media screen and (min-width: 980px) {}
+
+    @media screen and (max-width: 640px) {}
+
+    @media (max-width: 767px) navbar.less:615 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {}
+  </style>
+
+  <!-- <style>
+*{
+  padding : 0;
+  margin : 0;
+}
+
+.card{
+  /* width : 98%;
+  height :400px; */
+  
+  
+  display : flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.image1{
+  Background : url("/Images_demo/images.jfif") ;
+  background-size : contain;
+  background-repeat: no-repeat;
+}
+
+.image2{
+  Background : url("/Images_demo/Research_newsletter.jfif") ;
+  background-size : contain;
+  background-repeat: no-repeat;
+}
+
+.image3{
+  Background : url("/Images_demo/Newsletter.webp") ;
+  background-size : contain;
+  background-repeat: no-repeat;
+}
+
+.image4{
+  Background : url("/Images_demo/Scholar_girl.webp") ;
+  background-size : fill;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.t{
+  padding: 2px;
+color: #000;
+}
+
+.descriptionc{
+  height: 40%;
+  background-image: linear-gradient(#0000, black 50%);
+  display : flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition : linear 0.4s;
+}
+
+.card:hover  > .descriptionc{
+  transform: translateY(0);
+}
+.description > button{
+   width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.headi{
+  color: white;
+  margin-top : 70px;
+}
+
+  </style> -->
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .ad-wrapper {
+      height: 550px;
+      width: 100%;
+      margin: 5px 0px 5px 0px;
+      background-color: rgb(246, 246, 246);
+      padding: 20px;
+    }
+
+
+    .ad-container {
+      display: flex;
+      height: 50%;
+      margin: 20px 0px 10px 0px;
+
+
+    }
+
+    .ad-card {
+      height: 100%;
+      width: 25%;
+      border: 2px solid #26aae1;
+      margin: 2px 2px 2px 12px;
+      overflow: hidden;
+    }
+
+    .image-1:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(NITRR.png);
+    }
+
+    .image-1 {
+      background-image: url(NITRR.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 50%;
+    }
+
+    .image-2:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(cognition.png);
+    }
+
+    .image-2 {
+      background-image: url(cognition.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .image-3:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(mirror.png);
+    }
+
+    .image-3 {
+      background-image: url(mirror.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 -20%;
+    }
+
+    .image-4:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(place.jpg);
+    }
+
+    .image-4 {
+      background-image: url(place.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      background-position: 30% 50%;
+    }
+
+    .image-5:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(achivement.jpeg);
+    }
+
+    .image-5 {
+      background-image: url(achivement.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .image-6:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(ashirwad.jfif);
+    }
+
+    .image-6 {
+      background-image: url(ashirwad.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .image-7:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(shaury.jpeg);
+    }
+
+    .image-7 {
+      background-image: url(shaury.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .image-8:hover {
+      background-image: linear-gradient(to bottom, #0000 -5%, #26aae1),
+        url(shilpi.png);
+    }
+
+    .image-8 {
+      background-image: url(shilpi.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .ad-card:hover>.ad-content>.ad-para {
+      transform: translateY(0);
+    }
+
+    .ad-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: rgb(255, 255, 255);
+
+
+    }
+
+    .ad-head {
+      background-color: #26aae1;
+      color: white;
+      font-size: 16px;
+
+    }
+
+    .ad-para {
+      transform: translateY(110%);
+      transition: all ease-in-out 0.3s;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ad-button {
+      width: 70%;
+      margin: 10px;
+      text-decoration: none;
+      text-decoration-style: none;
+      border-bottom: none;
+    }
+
+    .ad-button>a:link {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .ad-button>a:hover {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .ad-button>a:active {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .ad-button>a:visited {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+
+    @media (max-width:767px) {
+
+      .ad-wrapper {
+        height: auto;
+      }
+
+      .ad-container {
+        height: auto;
+      }
+
+      .ad-container {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .ad-card {
+        width: 90%;
+        height: 300px;
+      }
+
+      .ad-para {
+        transform: translateY(0);
+      }
+
+
+      .image-1 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(NITRR.png);
+      }
+
+
+
+      .image-2 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(cognition.png);
+      }
+
+
+
+      .image-3 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(mirror.png);
+      }
+
+
+      .image-4 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(place.jpg);
+      }
+
+
+      .image-5 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(achivement.jpeg);
+      }
+
+
+      .image-6 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(ashirwad.jfif);
+      }
+
+
+      .image-7 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(shaury.jpeg);
+      }
+
+
+      .image-8 {
+        background-image: linear-gradient(to bottom, #0000 15%, #26aae1),
+          url(shilpi.png);
+      }
+
+
+    }
+  </style>
+  <link href="./Ash_files/css" rel="stylesheet">
+
+  <link href="./Ash_files/css(1)" rel="stylesheet" type="text/css">
+  <link href="./Ash_files/css(2)" rel="stylesheet" type="text/css">
+
+  <link href="./Ash_files/css(3)" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./Ash_files/translateelement.css">
+  <script type="text/javascript" charset="UTF-8" src="./Ash_files/m=el_main"></script>
+  <link rel="stylesheet" href="Ash_files/ad.css">
+</head>
+
+<body class="home homeone" style="position: relative; min-height: 100%; top: 0px;">
+
+  <div id="wrapper" class="wrapper" style="margin-top:-27px;">
+    <!--************************************
+                Header Start
+        *************************************-->
+    <header id="header" class="header haslayout">
+
+      <div class="clearfix"></div>
+      <div class="container-fluid" style="margin-top:-5px;">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top:5px;">
+            <div class="logoandnoticeboard" style="background:white;">
+
+              <a href="http://nitrr.ac.in/index.php"><img src="./Ash_files/nitrr.gif"
+                  class="col-sm-1 col-xs-3 LogoImg hidden-xs " style="position:relative;top:7px;"></a>
+              <img src="./Ash_files/nitrr.gif" style="position:relative;left:36%;"
+                class="col-sm-1 col-xs-3 LogoImg hidden-lg hidden-sm hidden-md">
+              <div class="logo">
+                <a href="http://www.nitrr.ac.in/index.php" style="text-decoration: none;">
+                  National Institute of Technology, Raipur <br>
+                  <div class="Logohindi" style="margin-top:-13px;"> राष्ट्रीय प्रौद्योगिकी संस्थान ,रायपुर</div>
+                </a>
+              </div>
+              <div class="noticeboard hidden-xs">
+                <div class="textbox">
+                  <span>
+                    <a href="http://www.nitrr.ac.in/index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="http://mail.google.com/a/nitrr.ac.in"> <i class="fa fa-envelope" aria-hidden="true"></i>
+                      Email</a>
+
+
+                    <a href="http://nitrr.ac.in/directors.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                      Directors of NITRR</a>
+
+
+
+                    <a href="http://gecnitrralumni.org/"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                      Alumni</a>
+                    <!--                                       <a href="http://tpo.nitrr.ac.in" target="_new"><i class="fa fa-users" aria-hidden="true"></i> T & P</a> -->
+                    <a href="http://www.nitrr.ac.in/nirf_data.php"> <i class="fa fa-certificate" aria-hidden="true"></i>
+                      NIRF</a>
+                    <!--<a href="http://old.nitrr.ac.in"><i class="fa fa-home" aria-hidden="true"></i> Old Website</a>-->
+                    <a href="http://www.nitrr.ac.in/contact.php"><i class="fa fa-phone-square" aria-hidden="true"></i>
+                      Contact</a>
+                    <div id="google_translate_element">
+                      <div class="skiptranslate goog-te-gadget" dir="ltr" style="">
+                        <div id=":0.targetLanguage"><select class="goog-te-combo"
+                            aria-label="Language Translate Widget">
+                            <option value="">Select Language</option>
+                            <option value="af">Afrikaans</option>
+                            <option value="sq">Albanian</option>
+                            <option value="am">Amharic</option>
+                            <option value="ar">Arabic</option>
+                            <option value="hy">Armenian</option>
+                            <option value="as">Assamese</option>
+                            <option value="ay">Aymara</option>
+                            <option value="az">Azerbaijani</option>
+                            <option value="bm">Bambara</option>
+                            <option value="eu">Basque</option>
+                            <option value="be">Belarusian</option>
+                            <option value="bn">Bengali</option>
+                            <option value="bho">Bhojpuri</option>
+                            <option value="bs">Bosnian</option>
+                            <option value="bg">Bulgarian</option>
+                            <option value="my">Burmese</option>
+                            <option value="ca">Catalan</option>
+                            <option value="ceb">Cebuano</option>
+                            <option value="ny">Chichewa</option>
+                            <option value="zh-CN">Chinese (Simplified)</option>
+                            <option value="zh-TW">Chinese (Traditional)</option>
+                            <option value="co">Corsican</option>
+                            <option value="hr">Croatian</option>
+                            <option value="cs">Czech</option>
+                            <option value="da">Danish</option>
+                            <option value="dv">Dhivehi</option>
+                            <option value="doi">Dogri</option>
+                            <option value="nl">Dutch</option>
+                            <option value="eo">Esperanto</option>
+                            <option value="et">Estonian</option>
+                            <option value="ee">Ewe</option>
+                            <option value="tl">Filipino</option>
+                            <option value="fi">Finnish</option>
+                            <option value="fr">French</option>
+                            <option value="fy">Frisian</option>
+                            <option value="gl">Galician</option>
+                            <option value="ka">Georgian</option>
+                            <option value="de">German</option>
+                            <option value="el">Greek</option>
+                            <option value="gn">Guarani</option>
+                            <option value="gu">Gujarati</option>
+                            <option value="ht">Haitian Creole</option>
+                            <option value="ha">Hausa</option>
+                            <option value="haw">Hawaiian</option>
+                            <option value="iw">Hebrew</option>
+                            <option value="hi">Hindi</option>
+                            <option value="hmn">Hmong</option>
+                            <option value="hu">Hungarian</option>
+                            <option value="is">Icelandic</option>
+                            <option value="ig">Igbo</option>
+                            <option value="ilo">Ilocano</option>
+                            <option value="id">Indonesian</option>
+                            <option value="ga">Irish Gaelic</option>
+                            <option value="it">Italian</option>
+                            <option value="ja">Japanese</option>
+                            <option value="jw">Javanese</option>
+                            <option value="kn">Kannada</option>
+                            <option value="kk">Kazakh</option>
+                            <option value="km">Khmer</option>
+                            <option value="rw">Kinyarwanda</option>
+                            <option value="gom">Konkani</option>
+                            <option value="ko">Korean</option>
+                            <option value="kri">Krio</option>
+                            <option value="ku">Kurdish (Kurmanji)</option>
+                            <option value="ckb">Kurdish (Sorani)</option>
+                            <option value="ky">Kyrgyz</option>
+                            <option value="lo">Lao</option>
+                            <option value="la">Latin</option>
+                            <option value="lv">Latvian</option>
+                            <option value="ln">Lingala</option>
+                            <option value="lt">Lithuanian</option>
+                            <option value="lg">Luganda</option>
+                            <option value="lb">Luxembourgish</option>
+                            <option value="mk">Macedonian</option>
+                            <option value="mai">Maithili</option>
+                            <option value="mg">Malagasy</option>
+                            <option value="ms">Malay</option>
+                            <option value="ml">Malayalam</option>
+                            <option value="mt">Maltese</option>
+                            <option value="mi">Maori</option>
+                            <option value="mr">Marathi</option>
+                            <option value="mni-Mtei">Meiteilon (Manipuri)</option>
+                            <option value="lus">Mizo</option>
+                            <option value="mn">Mongolian</option>
+                            <option value="ne">Nepali</option>
+                            <option value="no">Norwegian</option>
+                            <option value="or">Odia (Oriya)</option>
+                            <option value="om">Oromo</option>
+                            <option value="ps">Pashto</option>
+                            <option value="fa">Persian</option>
+                            <option value="pl">Polish</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="qu">Quechua</option>
+                            <option value="ro">Romanian</option>
+                            <option value="ru">Russian</option>
+                            <option value="sm">Samoan</option>
+                            <option value="sa">Sanskrit</option>
+                            <option value="gd">Scots Gaelic</option>
+                            <option value="nso">Sepedi</option>
+                            <option value="sr">Serbian</option>
+                            <option value="st">Sesotho</option>
+                            <option value="sn">Shona</option>
+                            <option value="sd">Sindhi</option>
+                            <option value="si">Sinhala</option>
+                            <option value="sk">Slovak</option>
+                            <option value="sl">Slovenian</option>
+                            <option value="so">Somali</option>
+                            <option value="es">Spanish</option>
+                            <option value="su">Sundanese</option>
+                            <option value="sw">Swahili</option>
+                            <option value="sv">Swedish</option>
+                            <option value="tg">Tajik</option>
+                            <option value="ta">Tamil</option>
+                            <option value="tt">Tatar</option>
+                            <option value="te">Telugu</option>
+                            <option value="th">Thai</option>
+                            <option value="ti">Tigrinya</option>
+                            <option value="ts">Tsonga</option>
+                            <option value="tr">Turkish</option>
+                            <option value="tk">Turkmen</option>
+                            <option value="ak">Twi</option>
+                            <option value="uk">Ukrainian</option>
+                            <option value="ur">Urdu</option>
+                            <option value="ug">Uyghur</option>
+                            <option value="uz">Uzbek</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="cy">Welsh</option>
+                            <option value="xh">Xhosa</option>
+                            <option value="yi">Yiddish</option>
+                            <option value="yo">Yoruba</option>
+                            <option value="zu">Zulu</option>
+                          </select></div>Powered by <span style="white-space:nowrap"><a class="goog-logo-link"
+                            href="https://translate.google.com/" target="_blank"><img
+                              src="./Ash_files/googlelogo_color_42x16dp.png" width="37px" height="14px"
+                              style="padding-right: 3px" alt="Google Translate">Translate</a></span>
+                      </div>
+                    </div>
+
+
+                  </span>
+
+                </div>
+
+              </div>
+
+              <script type="text/javascript">
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                }
+              </script>
+
+              <script type="text/javascript" src="./Ash_files/element.js.download"></script>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid" style="position:relative;top:-10px;">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div id="navbar">
+            <nav class="navbar navbar-inverse" role="navigation" style="background:#1995d4;color:white;">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-collapse-1" style="background:#1995d4;color:white;">
+                <ul class="nav navbar-nav" style="background:#1995d4;color:white;">
+                  <!--single menu here-->
+                  <ul class="hidden-lg hidden-sm hidden-md" style="padding-left:14px;list-style-type:none;">
+
+                    <li><i class="fa fa-home" aria-hidden="true"></i> <a href="http://www.nitrr.ac.in/index.php"
+                        style="text-decoration:none;color:white;">Home</a></li>
+                    <li>
+
+                      <i class="fa fa-envelope" aria-hidden="true"></i> <a href="http://mail.google.com/a/nitrr.ac.in"
+                        style="text-decoration:none;color:white;"> Email</a>
+                    </li>
+                    <li> <i class="fa fa-graduation-cap" aria-hidden="true"></i> <a href="http://gecnitrralumni.org/"
+                        style="text-decoration:none;color:white;"> Alumni</a></li>
+                    <!--                                       <li> <i class="fa fa-users" aria-hidden="true"></i> <a href="http://tpo.nitrr.ac.in" target="_new" style="text-decoration:none;color:white;"> T & P</a></li> -->
+                    <li> <i class="fa fa-certificate" aria-hidden="true"></i> <a
+                        href="http://www.nitrr.ac.in/nirf_data.php" style="text-decoration:none;color:white;">NIRF</a>
+                    </li>
+                    <!--
+<li><i class="fa fa-home" aria-hidden="true" ></i> <a href="http://old.nitrr.ac.in" style="text-decoration:none;color:white;">Old Website</a></li> -->
+
+                    <li><i class="fa fa-phone-square" aria-hidden="true"></i><a
+                        href="http://www.nitrr.ac.in/contact.php" style="text-decoration:none;color:white;"> Contact</a>
+                    </li>
+
+                  </ul>
+                  <li class="dropdown">
+
+                    <a href="http://www.nitrr.ac.in/#" class="dropdown-toggle" data-toggle="dropdown"
+                      style="color:white;background-color:#1995d4;">
+                      <i class="fa fa-bank"></i>&nbsp;The Institute <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.nitrr.ac.in/genesis.php" style="color:black; text-transform:none;">●
+                          Genesis</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutus.php" style="color:black; text-transform:none;">● About
+                          Institute</a></li>
+                      <!-- <li><a href="downloads/vision_2020.pdf" style="color:black; text-transform:none;" target="_new">&#9679; Vision 2030</a></li> -->
+                      <li><a href="http://www.nitrr.ac.in/downloads/Vision%202030_24112021.pdf"
+                          style="color:black; text-transform:none;" target="_new">● Vision 2030</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="http://www.nitrr.ac.in/#" class="dropdown-toggle" data-toggle="dropdown"
+                      style="color:white;background-color:#1995d4;"><i class="fa fa-cogs"></i>&nbsp;Administration <b
+                        class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.nitrr.ac.in/bog.php" style="color:black; text-transform:none;">● Board of
+                          Governors</a></li>
+                      <li><a href="http://www.nitrr.ac.in/director.php" style="color:black; text-transform:none;">●
+                          Director</a></li>
+                      <li><a href="http://www.nitrr.ac.in/deans.php" style="color:black; text-transform:none;">●
+                          Deans</a></li>
+                      <li><a href="http://www.nitrr.ac.in/registrar.php" style="color:black; text-transform:none;">●
+                          Registrar</a></li>
+                      <li><a href="http://www.nitrr.ac.in/senate.php" style="color:black; text-transform:none;">●
+                          Senate</a></li>
+                      <li><a href="http://www.nitrr.ac.in/BAWC.php" style="color:black; text-transform:none;">● Building
+                          and Work Committee</a></li>
+                      <li><a href="http://www.nitrr.ac.in/finance.php" style="color:black; text-transform:none;"> ●
+                          Finance Committee</a></li>
+                      <li><a href="http://www.nitrr.ac.in/adminstaff.php" style="color:black; text-transform:none;">●
+                          Administrative Staff</a></li>
+                      <li><a href="http://www.nitrr.ac.in/committee.php" style="color:black; text-transform:none;">●
+                          Committees</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="http://www.nitrr.ac.in/#" class="dropdown-toggle" data-toggle="dropdown"
+                      style="color:white;background-color:#1995d4;"><i class="fa fa-home"></i>&nbsp;Department <b
+                        class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.nitrr.ac.in/aboutgeology.php" style="color: black;">● Applied Geology</a>
+                      </li>
+                      <li><a href="http://www.nitrr.ac.in/aboutarchitecture.php"
+                          style="color:black; text-transform:none;">● Architecture</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutbiomed.php" style="color:black; text-transform:none;">●
+                          Bio Medical Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutbiotech.php" style="color:black; text-transform:none;">●
+                          Bio Technology</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutchemical.php" style="color:black; text-transform:none;">●
+                          Chemical Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutcivil.php" style="color:black; text-transform:none;">●
+                          Civil Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutcse.php" style="color:black; text-transform:none;">●
+                          Computer Science &amp; Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutchemistry.php"
+                          style="color:black; text-transform:none;">● Department of Chemistry</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutmath.php" style="color:black; text-transform:none;">●
+                          Department of Mathematics</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutphysics.php" style="color:black; text-transform:none;">●
+                          Department of Physics</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutenglish.php" style="color:black; text-transform:none;">●
+                          Department of Humanities &amp; Social Sciences</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutelectrical.php"
+                          style="color:black; text-transform:none;">● Electrical Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutelectronics.php"
+                          style="color:black; text-transform:none;">● Electronics and Communication Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutit.php" style="color:black; text-transform:none;">●
+                          Information Technology</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutmca.php" style="color:black; text-transform:none;">●
+                          Master in Computer Application</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutmechanical.php"
+                          style="color:black; text-transform:none;">● Mechanical Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutmining.php" style="color:black; text-transform:none;">●
+                          Mining Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutmeta.php" style="color:black; text-transform:none;">●
+                          Metallurgical and Materials Engineering</a></li>
+                      <li><a href="http://www.nitrr.ac.in/aboutworkshop.php" style="color:black; text-transform:none;">●
+                          Workshop</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="http://www.nitrr.ac.in/res_home.php" style="color:white;background-color:#1995d4;"><i
+                        class="fa fa-pencil-square-o"></i>&nbsp; Research &amp; Consultancy </a>
+                  </li>
+                  <!--    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white;background-color:#1995d4;"><i class="	fa fa-pencil-square-o"></i>&nbsp;Research & Consultancy <b class="caret"></b></a> 
+          <ul class="dropdown-menu">
+          	<li><a href="researchconsult.php"style="color:black; text-transform:none;">&#9679; Sponsored Project</a></li>
+			     <li><a href="researchgrant_pro.php"style="color:black; text-transform:none;">&#9679; Research Seed Grant Project</a></li>
+           <li><a href="consul_proj.php" style="color:black; text-transform:none;">&#9679; Consultancy Project</a></li>
+           <li><a href="ins_procedures.php" style="color:black; text-transform:none;">&#9679; Institutional Procedures</a></li>
+										<li><a href="iec.php"style="color:black; text-transform:none;">&#9679; Institutional Ethics Committee (IEC)</a></li>
+					<li><a href="iprp.php"style="color:black; text-transform:none;">&#9679; Intellectual Property Rights Policy</a></li>
+			    <li><a href="stud_conf.php"style="color:black; text-transform:none;">&#9679; Students Conference Sponsored by Institute</a></li>
+          <li><a href="res_adv_com.php"style="color:black; text-transform:none;">&#9679; Research Advisory Committee</a></li>
+          </ul>
+        </li> -->
+                  <!--  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white;background-color:#1995d4;">Academics<b class="caret"></b></a> 
+          <ul class="dropdown-menu">
+          	<li><a href="ordinances.php"style="color:black; text-transform:none;"> &#9679; Ordinances</a></li>
+					<li><a href="acad_calendar.php" style="color:black; text-transform:none;"> &#9679;Academic Calender</a></li>
+					<li><a href="acad_notice.php"style="color:black; text-transform:none;">&#9679; Notices</a></li>
+					<li><a href="how_to_Apply.php"style="color:black; text-transform:none;">&#9679; How To Apply</a></li>
+					<li><a href="syllabus.php"style="color:black; text-transform:none;"> &#9679;Syllabus & Scheme</a></li>
+					<li><a href="acad_calendar.php" style="color:black; text-transform:none;">&#9679; List of Holidays</a></li>
+					<li><a href="firstyear_schedule.php"style="color:black; text-transform:none;">&#9679; First Year Classes Schedule's</a></li>
+				
+          </ul>
+        </li>-->
+
+                  <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white;background-color:#1995d4;">Addmission <b class="caret"></b></a> 
+          <ul class="dropdown-menu">
+          						<li><a href="undergradprog.php" style="color:black; text-transform:none;">&#9679; Undergraduate Programme</a></li>
+					<li><a href="postgradprog.php" style="color:black; text-transform:none;">&#9679; Postgraduate Programme</a></li>
+					<li><a href="http://www.dasanit.org"style="color:black; text-transform:none;">&#9679; Direct Admission of Students Abroad</a></li>
+					<li><a href="phdadmission.php" style="color:black; text-transform:none;">&#9679; Ph.D. Admission</a></li>
+					<li><a href="admission-fees.php"style="color:black; text-transform:none;">&#9679; Fee Structure</a></li>
+					<li><a href="hosteladmission.php" style="color:black; text-transform:none;">&#9679; Hostel Admission</a></li>
+          </ul>
+        </li>-->
+                  <li class="dropdown">
+                    <a href="http://www.nitrr.ac.in/#" class="dropdown-toggle" data-toggle="dropdown"
+                      style="color:white;background-color:#1995d4;"><i class="fa fa-book"></i>&nbsp; Examination <b
+                        class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.nitrr.ac.in/timetable.php" style="color:black; text-transform:none;">●
+                          Time Table</a></li>
+                      <li><a href="http://www.nitrr.ac.in/verification.php" style="color:black; text-transform:none;">●
+                          Education Verification Procedure</a></li>
+                      <li><a href="http://www.nitrr.ac.in/exam_notice.php" style="color:black; text-transform:none;">●
+                          Notice</a></li>
+                      <li><a href="http://www.nitrr.ac.in/results.php" style="color:black; text-transform:none;">●
+                          Results</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="http://www.nitrr.ac.in/#" class="dropdown-toggle" data-toggle="dropdown"
+                      style="color:white;background-color:#1995d4;"><i class="fa fa-building-o"></i>&nbsp;Facilities<b
+                        class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.nitrr.ac.in/dept-cl.php" style="color:black; text-transform:none;">●
+                          Central Library</a></li>
+                      <li><a href="http://www.nitrr.ac.in/hostel.php" style="color:black; text-transform:none;">●
+                          Hostel</a></li>
+                      <li><a href="http://www.nitrr.ac.in/dispensary.php" style="color:black; text-transform:none;">●
+                          Medical Facilities</a></li>
+                      <li><a href="http://www.nitrr.ac.in/guest_house.php" style="color:black; text-transform:none;">●
+                          Guest House</a></li>
+                      <li><a href="http://www.nitrr.ac.in/campus_security.php"
+                          style="color:black; text-transform:none;"> ● Campus Security</a></li>
+                      <li><a href="http://www.nitrr.ac.in/dept-eo.php" style="color:black; text-transform:none;"> ●
+                          Estate Office</a></li>
+                      <li><a
+                          href="http://www.nitrr.ac.in/downloads/notice/2022/Circular%20regarding%20charges%20for%20common%20facilities.pdf"
+                          style="color:black; text-transform:none;"> ● Charges for Common facilities</a></li>
+                      <li><a href="http://www.nitrr.ac.in/sports.php" style="color:black; text-transform:none;">●
+                          Sports</a></li>
+                      <li><a href="http://www.nitrr.ac.in/all_in_one_store.php"
+                          style="color:black; text-transform:none;">● All-In-One Store</a></li>
+                      <li><a href="http://www.nitrr.ac.in/juice_corner_CDB.php"
+                          style="color:black; text-transform:none;">● Juice Corner and Coffee Day </a></li>
+                      <li><a href="http://www.nitrr.ac.in/canteen.php" style="color:black; text-transform:none;">●
+                          Canteen and CCD </a></li>
+
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="http://www.nitrr.ac.in/#" class="dropdown-toggle" data-toggle="dropdown"
+                      style="color:white;background-color:#1995d4;">
+                      <i class="fa fa-map-pin"></i>&nbsp;Centers<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.nitrr.ac.in/cec_adv.php" style="color:black; text-transform:none;"> ●
+                          Continuing Education Center</a></li>
+                      <!-- <li><a href="subdicbioinfo.php"style="color:black; text-transform:none;"> &#9679; Sub-DIC Bioinformatics</a></li> -->
+                      <!-- <li><a href="http://ccc.nitrr.ac.in" style="color:black; text-transform:none;"> &#9679; Central Computer Center</a></li> -->
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="http://ccc.nitrr.ac.in/" style="color:white;background-color:#1995d4;"><i
+                        class="fa fa-user"></i>&nbsp; CCC </a>
+                  </li>
+                  <li>
+                    <a href="http://cdc.nitrr.ac.in/" style="color:white;background-color:#1995d4;"><i
+                        class="fa fa-user"></i>&nbsp; CDC </a>
+                  </li>
+                  <li>
+                    <a href="http://tpo.nitrr.ac.in/" style="color:white;background-color:#1995d4;"><i
+                        class="fa fa-user"></i>&nbsp; T&amp;P </a>
+                  </li>
+
+                </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--************************************
+                    Header End
+            *************************************-->
+    <!--************************************
+                Home Slider Start
+        *************************************-->
+
+
+
+
+    <!-- modal-->
+    <style>
+      hr {
+        opacity: 0.3;
+        border-color: #000;
+      }
+
+      #css-only-modals {
+        position: fixed;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10000000;
+        text-align: center;
+        white-space: nowrap;
+        height: 100%;
+        overflow: scroll;
+      }
+
+      #css-only-modals:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+
+      }
+
+      .css-only-modal-check {
+        pointer-events: auto;
+      }
+
+      .css-only-modal-check:checked~.css-only-modal {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .css-only-modal {
+        height: auto;
+        width: 60%;
+        background: #FFF;
+        z-index: 1;
+        display: inline-block;
+        position: relative;
+        pointer-events: auto;
+        padding: 25px;
+        text-align: right;
+        border-radius: 4px;
+        white-space: normal;
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 0;
+        pointer-events: none;
+        overflow: scroll;
+      }
+
+      .css-only-modal h2 {
+        text-align: center;
+      }
+
+      .css-only-modal p {
+        text-align: left;
+      }
+
+      .css-only-modal-close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+      }
+
+      .css-only-modal-check {
+        display: none;
+      }
+
+      .css-only-modal-check:checked~#screen-shade {
+        opacity: 0.5;
+        pointer-events: auto;
+      }
+
+      #screen-shade {
+        opacity: 0;
+        background: #000;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        transition: opacity 0.8s;
+      }
+
+      .stripe>.container>p,
+      .stripe>.container>ul {
+        text-align: left;
+        padding: 35px;
+        margin: 0;
+      }
+
+      .stripe>.container>hr {
+        margin: 50px 0;
+      }
+
+      #nav-spacer {
+        display: block;
+        height: 50px;
+      }
+
+      .stripe {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .default {
+        color: White;
+        background: DarkCyan;
+      }
+
+      .inverse {
+        color: DarkCyan;
+        background: White;
+      }
+
+      .grey {
+        color: White;
+        background: DimGrey;
+      }
+
+      .grey-light {
+        color: DimGrey;
+        background: White;
+      }
+
+      .color {
+        color: DarkOrange;
+      }
+    </style>
+
+
+    <!--################################### Comment starts Below ##########################################  -->
+
+    <!-- Uncomment following to show the popup( by Ravindra) -->
+
+    <div id="css-only-modals">
+      <input id="modal1" class="css-only-modal-check" type="checkbox" checked="">
+      <!-- Uncomment following section for Popup (By Ravindra) -->
+      <!-- <div class="css-only-modal">
+  <label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x" style="font-size:40px;color:red"></i></label>   -->
+
+
+
+      <!--
+
+<h3 align=center> <a href="http://nitrr.ac.in/downloads/admission/admission2021/phd/List of selected candidates for PhD 2020-21 admission in NIT Raipur.pdf">  <u> <b>  List of selected candidates for PhD 2020-21 admission in NIT Raipur.</b></u></a> </h3> 
+ <iframe width="400" height="600" src="http://nitrr.ac.in/downloads/admission/admission2021/phd/List of selected candidates for PhD 2020-21 admission in NIT Raipur.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+-->
+
+      <!--
+<h3 align=center> <a href="http://nitrr.ac.in/downloads/admission/admission2021/pg/Supplementary Exam (Winter) March 2021-.pdf">  <u> <b>  Supplementary Exam (Winter) March 2021.</b></u></a> </h3> 
+ <iframe width="400" height="600" src="http://nitrr.ac.in/downloads/admission/admission2021/pg/Supplementary Exam (Winter) March 2021-.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+
+-->
+
+      <!--	
+<h3 align=center> <a href="downloads/notice/dean_acad_notice/2020/Instructions to Applicants of PhD admissions 2020-21new1.pdf">  <u> <b>  The lists of Ph.D. applicants to appear in the examination and those who are exempted from entrance (candidates who have qualified UGC/CSIR-NET&JRF etc.) </b></u></a> </h3> 
+ <iframe width="400" height="600" src="downloads/notice/dean_acad_notice/2020/Instructions to Applicants of PhD admissions 2020-21new1.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!--
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/vLhNM16DLWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/qWd6fB8-JlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+ -->
+      <!-- <iframe width="400" height="600" src="downloads/recruitment/recruitment2021/19-08-21/Important Information26-08-2021.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>  
+ -->
+
+      <!-- <iframe width="400" height="600" src="http://nitrr.ac.in/downloads/admission/admission2021/pg/M_tech2021_SportRound/Notice.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>  
+ -->
+
+      <!--<iframe width="200" height="600" src="http://nitrr.ac.in/downloads/Convocation/2021/e-Invitation of 12th Convocation 2021 of NIT Raipur.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>  
+-->
+
+      <!-- <iframe width="200" height="600" src="http://nitrr.ac.in/downloads/admission/admission2021/phd/PhD%202021%20Entrance%20and%20Admission%20notice.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>  
+ -->
+      <!-- <iframe width="200" height="600" src="http://nitrr.ac.in/downloads/notice/2022/Regarding%20classes%20and%20academic%20activities%20in%20view%20of%20COVID-19.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>  
+ -->
+
+      <!-- <iframe width="200" height="600" src="http://nitrr.ac.in/downloads/admission/admission2022/phd/Notice%20for%20interview%20for%20PhD%202021-22%20admissions.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>   -->
+
+      <!-- <iframe width="200" height="600" src="http://www.nitrr.ac.in/downloads/admission/admission2022/pg/07-07-2022/Flash%20on%20Website%20M.%20Tech.%202022%20admission%20related%20information.pdf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>   -->
+
+
+      <!--  Uncomment following section for poup Message (By Ravindra) -->
+      <!-- </div>  
+ <div id="screen-shade"></div>    -->
+
+    </div>
+
+
+    <!-- Remove this comment ################################### Comment Ends Below ########################################## -->
+
+
+
+
+
+
+
+
+
+    <div class="clearfix"></div>
+    <div class="container-fluid">
+
+      <div class="row" style="margin-top:-18px;">
+
+        <div class="col-sm-8">
+          <div class="container-fluid
+" style="padding-bottom:10px;width:107%;margin-left:-13px;">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"
+              style="border:2px solid black;">
+
+
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <!--	    <div class="item active">
+          <img src="images/ICLA_01.jpg" alt="...">
+      
+        </div> -->
+
+
+
+
+                <!--
+        <div class="item active">
+          <img src="images/10th_Con1_960x420.jpg" alt="Convocation 2019" title="Convocation 2019">
+         <figcaption>Independence Day 2019</figcaption>
+        </div> 
+-->
+
+
+                <!--<div class="item active">
+          <img src="images/10th _Con_960x420.jpg" alt="Convocation 2019" title="Convocation 2019">
+          
+        </div>-->
+
+
+
+
+
+
+
+
+
+                <!--<div class="item ">
+          <img src="images/Webp.net-compress-image(8).jpg" alt="" title="">
+          
+        </div>-->
+
+
+
+
+
+                <!--<div class="item ">
+          <img src="images/IMG_20200104_111603_960x420.jpg" alt=" IEEE international conference conducted by Electrical Engineering Department." title=" IEEE international conference conducted by Electrical Engineering Department.">
+          
+        </div>-->
+
+
+                <div class="item">
+                  <img src="./Ash_files/Har-Ghar-Tiranga-26072022.jpg" alt="" title="">
+
+                </div>
+
+
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/harghar-tiranga-logo-Eng-Blue26072022.jpg" alt="" title="">
+
+                </div>
+
+
+                <div class="item">
+                  <img src="./Ash_files/202201(1).jpg" alt="" title="">
+
+                </div>
+
+
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/202202(1).jpg" alt="" title="">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/202203(1).jpg" alt="" title="">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/202204(1).jpg" alt="" title="">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/202205(1).jpg" alt="" title="">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/202206(1).jpg" alt="" title="">
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/NIT Raipur XII Convocation 2021 Website (3)(1).jpg" alt="" title="">
+
+                </div>
+
+
+
+                <!--<div class="item active ">
+          <img src="images/imgonline-com-ua-resize-f9dSLl7Ix4W9FD1XAAA.jpg" alt="" title="">
+          
+        </div>--->
+
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/NIT Raipur XII Convocation 2021 Website (1).jpg" alt="" title="">
+
+                </div>
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/NIT Raipur XII Convocation 2021 Website (2).jpg" alt="" title="">
+
+                </div>
+
+
+
+
+
+
+
+
+                <!-- <div class="item ">
+          <img src="images/imgonline-com-ua-resize-f9dSLl7Ix4W9FD1XAAA.jpg" alt="" title="">
+          
+        </div> -->
+
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/imgonline-com-ua-resize-lcxsa22QwXDBgqA.jpg" alt="" title="">
+
+                </div>
+
+
+
+                <div class="item">
+                  <img src="./Ash_files/imgonline-com-ua-resize-MetV1XjdiStJQmB.jpg" alt="" title="">
+
+                </div>
+
+
+
+
+                <!--  <div class="item ">
+          <img src="images/imgonline-com-ua-resize-3ZRsj9K9f30LUsSCjpg" alt="" title="">
+          
+        </div>
+         -->
+
+                <!-- <div class="item ">
+          <img src="images/imgonline-com-ua-resize-iLMuu6iC8nE1.jpg" alt="" title="">
+          
+        </div>
+
+
+
+      <div class="item ">
+          <img src="images/Webp.net-compress-image(8).jpg" alt="" title="">
+          
+        </div>
+
+        <div class="item ">
+          <img src="images/Webp.net-compress-image.jpg" alt="" title="">
+          
+        </div>
+
+
+
+        <div class="item">
+          <img src="images/Webp.net-compress-image(7).jpg" alt="" title="">
+          
+        </div>
+
+
+
+       <div class="item">
+          <img src="images/Webp.net-compress-image(5).jpg" alt="" title="">
+          
+        </div>
+
+
+      <div class="item">
+          <img src="images/Webp.net-compress-image(6).jpg" alt="" title="">
+          
+        </div>
+ -->
+                <!-- <div class="item">
+          <img src="images/Republic1.jpg" alt="The Republic Day Speech" title="Republic Day Speech">
+          
+        </div>
+
+
+
+
+        <div class="item">
+          <img src="images/output_960x420.jpg" alt="Celebrate the 71st republic day 2020" title="Celebrate the 71st republic day 2020">
+          
+        </div>-->
+
+
+
+                <!-- <div class="item">
+          <img src="images/Webp.net-compress-image(1).jpg" alt="" title="">
+          
+        </div>
+ -->
+                <!--
+      <div class="item">
+          <img src="images/Republic2960x420.jpg" alt="Republic Day parade" title="Republic Day parade">
+          
+        </div>
+
+<!--
+        <div class="item">
+          <img src="images/Republic1.jpg" alt="The Republic Day Speech" title="Republic Day Speech">
+          
+        </div>
+
+
+
+
+        <div class="item">
+          <img src="images/output_960x420.jpg" alt="Celebrate the 71st republic day 2020" title="Celebrate the 71st republic day 2020">
+          
+        </div>
+
+
+
+       <div class="item">
+          <img src="images/Republic_960x420.jpg" alt="Republic Day parade" title="Republic Day parade">
+          
+        </div>
+
+
+      <div class="item">
+          <img src="images/Republic2960x420.jpg" alt="Republic Day parade" title="Republic Day parade">
+          
+        </div>-->
+
+
+
+
+
+
+                <!--
+         <div class="item">
+          <img src="images/Inaugural_960x420.jpg" alt="NATIONAL CONFERENCE ON ADVANCED MATERIALS AND APPLICATIONS" title="NATIONAL CONFERENCE ON ADVANCED MATERIALS AND APPLICATIONS">
+          
+        </div>-->
+
+                <!--<div class="item">
+          <img src="images/10th_Con2_960x420.jpg" alt="Convocation 2019" title="Convocation 2019">
+          
+        </div>
+
+       <div class="item">
+          <img src="images/10th_Con3_960x420.jpg" alt="Convocation 2019" title="Convocation 2019">
+          
+        </div>
+
+
+       <div class="item">
+          <img src="images/www_960x420.jpg" alt="NIT Raipur">
+          
+        </div>-->
+
+
+                <!-- <div class="item ">
+          <img src="images/IMG_20190413_163803__01__01.jpg" alt="...">
+          
+        </div></div> -->
+
+
+
+                <!-- <div class="item ">
+          <img src="images/cefmc_960x420.jpg" alt="...">
+          
+        </div>-->
+
+
+
+
+
+
+
+
+                <!-- <div class="item ">
+          <img src="images/nit2_960x420.jpg"  alt="Independence Day 2019" title="Independence Day 2019">
+          
+        </div>
+
+    <div class="item ">
+          <img src="images/nit3_960x420.jpg" alt="...">
+          
+        </div>
+
+  <div class="item ">
+          <img src="images/nit5.jpg" alt="...">
+          
+        </div>
+
+
+
+  <div class="item ">
+          <img src="images/nit4.jpg" alt="...">
+          
+        </div>-->
+
+
+
+
+
+
+
+
+                <!--
+       
+      <div class="item ">
+          <img src="images/IMG_7949_960x420.jpg" alt="...">
+          
+        </div>
+
+		<div class="item">
+          <img src="images/DSC_0246_960x420.jpg" alt="...">
+          
+        </div> -->
+
+
+                <!--<div class="item">
+          <img src="images/CEFMC2019_960x420.jpg" alt="...">
+          
+        </div>
+        
+        <div class="item">
+          <img src="images/IMG_8026_960x420.jpg" alt="...">
+          
+        </div>
+
+
+         <div class="item">
+          <img src="images/con2018.jpg" alt="...">
+          
+        </div>-->
+                <!-- 
+		     <div class="item">
+          <img src="images/15.jpg"  alt="Hostel of NIT Raipur" title="Hostel of NIT Raipur">
+
+         
+          
+        </div> -->
+                <!--  <div class="item">
+          <img src="images/Vigilance_cert.jpg" alt="...">
+
+</div> -->
+
+
+
+                <!--          <div class="item">
+          <img src="images/001.jpeg" alt="...">
+          
+        </div> 
+        <div class="item">
+          <img src="images/002.jpeg" alt="...">
+          
+        </div>
+       <!--  <div class="item">
+          <img src="images/003.jpeg" alt="...">
+          
+        </div> -->
+                <!--<div class="item">
+          <img src="images/004.jpeg" alt="...">
+          
+        </div>-->
+                <!--<div class="item">
+          <img src="images/005.jpeg" alt="...">
+          
+        </div>
+        <div class="item">
+          <img src="images/006.jpeg" alt="...">
+          
+        </div>
+        
+        <div class="item">
+          <img src="images/007.jpeg" alt="...">
+          
+        </div> 
+
+
+
+
+      
+		 <div class="item">
+          <img src="images/2.jpg" alt="...">
+          
+        </div>-->
+
+
+                <!-- <div class="item ">
+          <img src="images/14.jpg" alt="...">
+          
+        </div>-->
+                <!--  <div class="item">
+          <img src="images/18.jpg" alt="...">
+          
+        </div> -->
+                <div class="item">
+                  <img src="./Ash_files/4.jpg" alt="...">
+
+                </div>
+                <div class="item active">
+                  <img src="./Ash_files/5.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/6.jpg" alt="...">
+
+                </div>
+                <!--  <div class="item">
+          <img src="images/7.jpg" alt="...">
+          
+        </div> -->
+                <!--<div class="item">
+          <img src="images/8.jpg" alt="...">
+          
+        </div> -->
+                <div class="item">
+                  <img src="./Ash_files/9.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/10.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/11.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                  <img src="./Ash_files/12.jpg" alt="...">
+
+                </div>
+
+                <div class="item">
+                  <img src="./Ash_files/13.jpg" alt="...">
+
+
+                </div>
+                <!--
+		     <div class="item">
+          <img src="images/16.jpg" alt="...">
+          
+        </div>-->
+                <div class="item">
+                  <img src="./Ash_files/17.jpg" alt="...">
+
+                </div>
+
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="http://www.nitrr.ac.in/#carousel-example-generic"
+                data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="http://www.nitrr.ac.in/#carousel-example-generic"
+                data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+
+          <div class="container-fluid"
+            style="border:2 px solid #52b554;background:#52b554;color:white;PADDING-TOP:10PX;WIDTH:98%;">
+            <div style="text-align:center;padding-bottom:-10px;">
+              IMPORTANT LINKS</div>
+
+            <div style="border-top:2px solid white;margin-top:4px;width:100%;margin-left:-10px;margin-bottom:10px;">
+            </div>
+
+            <div style="padding-bottom:1px;">
+              <ul>
+
+
+                <!--<li style="list-style-type:none;"><span class="glyphicon glyphicon-bell" >&nbsp;<a href="http://convocation20.nitrr.ac.in/" target="_blank"  style="color:blue;"><b>11<sup>th</b></sup> <b>Convocation on 1st December 2020 in Virtual Mode</b></a></span></li> -->
+
+                <!-- <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell" >&nbsp;<a href="downloads/admission/admission2021/ug/1_Information Bulletin for provisional admission in B_TechB.Arch -2021_ONLINE.pdf" style="color:white;" >DETAILS OF PROVISIONAL ADMISSION PROCESS FOR FIRST SEMESTER UG PROGRAMME SESSION 2021-22 IN ONLINE MODE</a></span></li>  -->
+
+                <li style="list-style-type: none;"><span class="	glyphicon glyphicon-bell">&nbsp;<a
+                      href="http://www.nitrr.ac.in/onlinepay.php" style="color:white; ">Online Fee Payment</a></span>
+                </li>
+
+                <li style="list-style-type: none;"><span class="  glyphicon glyphicon-bell">&nbsp;<a
+                      href="http://www.nitrr.ac.in/convocation.php" style="color:white; ">12th Convocation 2021</a>
+                    &nbsp;</span></li>
+
+
+                <li style="list-style-type: none;"><span class="	glyphicon glyphicon-bell"><a
+                      href="http://www.nitrr.ac.in/events.php"
+                      style="color:white;text-decoration:none;">&nbsp;Events</a></span></li>
+
+
+                <li style="list-style-type: none;"><span class="  glyphicon glyphicon-bell">&nbsp;<a
+                      href="http://www.nitrr.ac.in/donation.php" style="color:white; ">Appeal for Donation</a></span>
+                </li>
+
+                <li style="list-style-type: none;"><span class="  glyphicon glyphicon-bell">&nbsp;<a
+                      href="http://www.nitrr.ac.in/covid19.php" target="_blank" style="color:red;">COVID-19 Notices /
+                      Orders </a></span></li>
+
+
+                <!--<li style="list-style-type:none;"><span class="glyphicon glyphicon-bell" >&nbsp;<a href="convocation_10th.php" target="_blank"  style="color:white;">10<sup>th</sup> Convocation 1<sup>st</sup> December 2019</a></span></li> -->
+
+                <!-- <li style="list-style-type: none;"><span class="  glyphicon glyphicon-bell" >&nbsp;<a href="Fondation_day2018.php" target="_blank"  style="color:white;">Video of Foundation Day Celebration</a></span></li>  -->
+
+              </ul>
+              <div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+          <br>
+
+          <div class="container-fluid"
+            style="border:2 px solid #3575d3;background:#3575d3;color:white;PADDING-TOP:10PX;WIDTH:98%;">
+            <div style="text-align:center;padding-bottom:-10px;">
+              ACADEMICS</div>
+
+            <div style="border-top:2px solid white;margin-top:4px;width:120%;margin-left:-20px;margin-bottom:5px;">
+            </div>
+
+            <div style="padding-bottom:5px;">
+              <ul>
+                <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell"><a
+                      href="http://www.nitrr.ac.in/admission.php" style="color:white;text-decoration:none;">&nbsp;
+                      Admission &amp; Fee Structure </a></span></li>
+
+                <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell"><a
+                      href="http://www.nitrr.ac.in/ordinances.php" style="color:white;text-decoration:none;">&nbsp;
+                      Ordinances</a></span></li>
+
+                <!-- <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell" ><a href="acad_notice.php" style="color:white;text-decoration:none;">&nbsp; Notices</a></span></li> 
+ -->
+
+                <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell"><a
+                      href="http://www.nitrr.ac.in/acad_downloads.php" style="color:white;text-decoration:none;">&nbsp;
+                      Calender/Notices/Time Table</a></span></li>
+                <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell"><a
+                      href="http://www.nitrr.ac.in/syllabus.php" style="color:white;text-decoration:none;">&nbsp;
+                      Syllabus</a></span></li>
+                <!-- <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell"><a href="yeartopperlist.php" style="color:white;text-decoration:none;">&nbsp; Year Wise Toppers List</a></span></li> -->
+                <li style="list-style-type: none;"><span class="glyphicon glyphicon-bell"><a
+                      href="http://www.nitrr.ac.in/how_to_apply.php" style="color:white;text-decoration:none;">&nbsp;
+                      How to Apply</a></span></li>
+
+              </ul>
+              <div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--************************************
+                Home Slider End
+        *************************************-->
+
+
+      <div class="tickerbox" style="margin-top:-10px;">
+        <span>
+          <h5 class="flashit">
+            News :
+          </h5>
+        </span>
+        <div id="ticker" class="ticker owl-carousel">
+          <div class="item">
+            <div class="description">
+
+
+              <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                &nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/pg/M.%20Tech.%20Applied%20Geology%20admission%202022%20admission.pdf"
+                  target="_blank" rel="noopener">Shortlisted candidates for M. Tech. Applied Geology 2022-2023
+                  admissions and necessary
+                  instructions.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/pg/Information%20Sheet%20M.Tech%20admission%20CCMT%202022.pdf"
+                  target="_blank" rel="noopener">Information Sheet M.Tech. Admission Through CCMT -
+                  2022</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/pg/Information%20Sheet%20M.Sc.%20Admission%20CCMN%202022.pdf"
+                  target="_blank" rel="noopener">Information Sheet M.Sc. Admission Through CCMN -
+                  2022</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/NIMCET/Information%20Bulletin%20MCA%20Admission%20NIMCET%202022-23.pdf"
+                  target="_blank" rel="noopener">Information Bulletin MCA Admission NIMCET
+                  2022-23</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/hostel/hostel_admission%202022-23/URGENT%20NOTICE%20FOR%20FEE%20PAYMENT.pdf"
+                  target="_blank" rel="noopener">URGENT NOTICE FOR FEE
+                  PAYMENT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/advertisement.php" target="_blank" rel="noopener">Shortlisted candidates
+                  for&nbsp;interview for the post of&nbsp;Associate Professor/Assistant
+                  Professor.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/pg/07-07-2022/Flash%20on%20Website%20M.%20Tech.%202022%20admission%20related%20information.pdf"
+                  target="_blank" rel="noopener">M. Tech. (3-year programme) in Applied Geology and M. Tech. (2-year
+                  programme for Sponsored
+                  Candidates)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/fees/Fees_2022/Girls%20Hostel%20Admission%20session%202022-23.pdf"
+                  target="_blank" rel="noopener">Girls Hostel Admission Session
+                  2022-23</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/phd/PhD%202022%20results%20.pdf"
+                  target="_blank" rel="noopener">PhD results
+                  2022</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/acad_cal/2022/Notice-Time%20table%20for%20Mid%20semester%20examination%20Spring%202022%20B.Tech%202nd%20Semester.pdf"
+                  target="_blank" rel="noopener">Notice-Time table for Mid semester examination Spring 2022 B.Tech 2nd
+                  Semester</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/ug/Important%20Notice%20for%20UG%202nd%20semester.pdf"
+                  target="_blank" rel="noopener">Important Notice for UG 2nd Semester
+                  Students</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/exam/time%20table/2022/B.Tech.%202nd%20Semester%20Time%20table%20Spring%202022%20semeter.pdf"
+                  target="_blank" rel="noopener">B. Tech. 2nd Semester Time Table Spring 2022
+                  Semester</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://nitrr.ac.in/downloads/admission/admission2022/ug/Second%20Semester%20(Spring%202022)%20Registration%20notice%20and%20academic%20calendar.pdf"
+                  target="_blank" rel="noopener">Second Semester (Spring 2022) Registration notice and academic
+                  calendar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/admission/admission2022/phd/Notice%20for%20interview%20for%20PhD%202021-22%20admissions.pdf"
+                  target="_blank" rel="noopener">Schedule of in-person (offline) interviews for PhD 2021-2022
+                  admissions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="https://sites.google.com/view/researchscholarsconclave2022" target="_blank"
+                  rel="noopener">Research Scholars’ Conclave
+                  2022</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/NIT%20Raipur%20recognized%20as%20the%20District%20Green%20Champion%202021-22.pdf"
+                  target="_blank" rel="noopener">NIT Raipur recognized as the District Green Champion
+                  2021-22</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/notice_public_grievances.php" target="_blank" rel="noopener">Notice
+                  regarding redressal of public
+                  grievances</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/acad_downloads.php" target="_blank" rel="noopener">Important Notice for
+                  Students</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/acad_downloads.php" target="_blank" rel="noopener">Conduction of classes
+                  of B. Tech. / B. Arch. VIII semester in hybrid
+                  mode</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/acad_downloads.php" target="_blank" rel="noopener">Notice to IV semester
+                  B.Tech, B. Arch, MCA and II Semester M. Tech for conduction of classes in hybrid (both online and
+                  offline)
+                  mode</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/acad_downloads.php" target="_blank" rel="noopener">Important notice
+                  regarding classes and academic activities in view of
+                  COVID-19</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/stu_welfarenotice.php" target="_blank" rel="noopener">Extension for
+                  submission of application for Full Tuition fees reimbursement to students belonging to economically
+                  backward
+                  sections</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/advertisement.php" target="_blank" rel="noopener">Important Information :
+                  Due to the ongoing pandemic situation, the date of written test and/ interview for the post of Library
+                  Trainee is postponed and will be informed shortly.
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/stu_welfarenotice.php" target="_blank" rel="noopener">Full Tuition fees
+                  reimbursement to students belonging to economically backward
+                  sections</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/acad_downloads.php" target="_blank" rel="noopener">Time Table for Online
+                  B.Tech. / B.Arch. &nbsp;First Sem Classes for the Autumn
+                  2021</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/acad_downloads.php" target="_blank" rel="noopener">Academic Calendar
+                  2021-22 (1st Semester B.Tech.&amp;
+                  B.Arch.)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIT
+                Raipur secured 64th rank in Engineering category of NIRF
+                2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/downloads/ARI-U-0092_16_08_21.pdf" target="_blank" rel="noopener">ARIIA
+                  Report
+                  2021</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                  href="http://www.nitrr.ac.in/donation.php" target="_blank" rel="noopener">Appeal for
+                  Donation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </marquee>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <main id="main" class="main haslayout">
+        <div class="container-fluid" style="margin-top:-35px;">
+          <div class="row">
+            <div class="col-sm-8">
+              <section class="sectionspace haslayout">
+                <div class="shortcode welcomeandgreeting">
+                  <figure>
+                    <iframe width="560" height="315" src="./Ash_files/2qc7Zdl_8tM.html" frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen=""></iframe>
+                    <!-- <img src="images/NIT-raipur old.jpg"  alt="National Institute of Technology, Raipur"> -->
+                  </figure>
+
+
+
+
+
+                  <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/2qc7Zdl_8tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                  <!--   <iframe width="560" height="315" src="https://www.youtube.com/embed/2qc7Zdl_8tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                  <!--        <video width="560" height="315" controls align=center>
+    <source src="Video/Final NIT Video.mp4" type="video/mp4">
+    
+    Your browser does not support HTML5 video.
+  </video>  -->
+                  <div class="shortcodetextbox">
+                    <h2 align="center">Welcome </h2>
+                    <div class="description" style="text-align:justify;">
+                      <!--<p>Prof. Sudarshan Tiwari joined as a Director of National Institute of Technology, Raipur on 25th July 2012. Prior to his present assignment, he was professor in the Department of Electronics & Communication Engineering at MNNIT, Allahabad, where he has held several important administrative and academic positions namely, Head of the Department of Electronics & Communication Engineering, Dean Research & consultancy, Dean Resource generation and International affairs, Chairman, GIS Cell, Head of the Mathematics Department, Deputy Project Coordinator INDO-UK REC Project.</p>-->
+                      The institute is committed to the challenging task of development of technical education by
+                      preparing seasoned graduates in highly sophisticated field of engineering and technology.
+                      Development of India as an emerging industrial power is a demanding exercise as it involves the
+                      combination of cost effectiveness and efficiency along with producing world-class technology at
+                      the cutting edge. For about five decades we have been doing it with sincerity and commitment at
+                      NIT Raipur. At present the institute offers graduate level courses in twelve disciplines.
+                      <br>
+                    </div>
+                    <!--<span class="name">Dr. Sudarshan Tiwari</span>
+                                <span class="designation">Director</span>-->
+
+                  </div>
+                </div>
+              </section>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-4 col-md-6 col-lg-4">
+
+
+              <br>
+              <div class="row">
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <!--<div class="CategoryBox">
+                                                <a href="faculty.php"><h2><i class="fa fa-users" aria-hidden="true"></i> <br />Faculty</h2></a>
+                                            </div> -->
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/subscribe.php">
+                      <h2><i class="fa fa-street-view" aria-hidden="true"></i> <br>Campus Tour</h2>
+                    </a><img border="0" src="./Ash_files/new6.gif" width="18" height="7">
+                  </div>
+                </div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4   ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/achievements.php">
+                      <h2><i class="fa fa-trophy" aria-hidden="true"></i> <br>Acheivement</h2>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <!--  
+                                                <a href="http://172.16.200.10/NITRR/">   <h2><i class="fa fa-address-card-o" aria-hidden="true"></i> <br />MIS</h2></a>
+                                            -->
+
+                    <a href="http://www.nitrr.ac.in/mis_new.php">
+                      <h2><i class="fa fa-address-card-o" aria-hidden="true"></i> <br>MIS</h2>
+                    </a>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="row" style="padding-top:10px;">
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/results.php">
+                      <h2><i class="fa fa-book" aria-hidden="true"></i> <br>Result</h2>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/advertisement.php">
+                      <h2><i class="fa fa-bullhorn" aria-hidden="true"></i> <br>Recruitment</h2>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/gallery.php">
+                      <h2><i class="fa fa-camera" aria-hidden="true"></i> <br> Gallery</h2>
+                    </a>
+
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="row" style="padding-top:10px;">
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/gen_downloads.php">
+                      <h2><i class="fa fa-download" aria-hidden="true"></i> <br>Downloads</h2>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/student_welfare.php">
+                      <h2><i class="fa fa-group" aria-hidden="true"></i> <br>Student Welfare</h2>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="http://www.nitrr.ac.in/circulars.php">
+                      <h2><i class="fa fa-folder-o" aria-hidden="true"></i> <br>Circulars</h2>
+                    </a>
+
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="row" style="padding-top:10px;">
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="https://csab.nic.in/" target="new">
+                      <h2><i class="fa fa-university" aria-hidden="true"></i> <br>CSAB</h2>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="https://ccmt.admissions.nic.in/" target="new">
+                      <h2><i class="fa fa-university" aria-hidden="true"></i> <br>CCMT</h2>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4  ">
+
+                  <div class="CategoryBox">
+                    <a href="https://www.nimcet.in/" target="new">
+                      <h2><i class="fa fa-university" aria-hidden="true"></i> <br>NIMCET</h2>
+                    </a>
+
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- code by deepak and ashu -->
+
+
+          <div class="ad-wrapper">
+            <div class="ad-container">
+              <div class="ad-card image-1">
+                <div class="ad-content">
+                  <h3 class="ad-head">NITRR Achivements</h3>
+                  <p class="ad-para"><b> NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR is hereby recognized as
+                      District Green Champion for Raipur District, Chhattisgarh for the Academic Year 2021-22
+                    </b><br><button class="ad-button"><a
+                        href="extra/Achievments.html"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="ad-card image-2">
+                <div class="ad-content">
+                  <h3 class="ad-head">Research News Letter</h3>
+                  <p class="ad-para"> <b> Cognition is a digital research newsletter of NIT Raipur published
+                      quarterly.</b>
+                    <br><button class="ad-button"><a href="http://nitrr.ac.in/Researchnewsletter.php"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="ad-card image-3">
+                <div class="ad-content">
+                  <h3 class="ad-head">News Letter</h3>
+                  <p class="ad-para"><b> Mirror is an official newsletter of the institute aims to keep the stakeholder
+                      updated about signficant development.</b>
+                    <br><button class="ad-button"><a href="http://www.nitrr.ac.in/newsletter.php"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="ad-card image-4">
+                <div class="ad-content">
+                  <h3 class="ad-head">Placement Statistics</h3>
+                  <p class="ad-para"><b> National Institute of Technology, (NIT) Raipur ranked 67th under the
+                      Engineering category by NIRF 2020 report. The institute is conducting its 2021 placement drive. 92
+                      companies participated in the placement drive & made a total of 599 placement offers.</b>
+                    <br><button class="ad-button"><a href="https://tpo.nitrr.ac.in/stats.html"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="ad-container">
+              <div class="ad-card image-5">
+                <div class="ad-content">
+                  <h3 class="ad-head">Students Achivements</h3>
+                  <p class="ad-para"><b> Students are regularly participating in Chhattisgarh Young Scientist Congress
+                      and had
+                      received the title of “Chhattisgarh Young Scientist” for various years as mentioned below:</b>
+                    <br><button class="ad-button"><a
+                        href="extra/Students Achievments.html"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="ad-card image-6">
+                <div class="ad-content">
+                  <h3 class="ad-head">Social Life at NITRR</h3>
+                  <p class="ad-para"><b> Ashirwad, a social activity platform of NIT families.
+                    </b><br><button class="ad-button"><a
+                        href="extra/Social_life_nitrr.html"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="ad-card image-7">
+                <div class="ad-content">
+                  <h3 class="ad-head">Clubs</h3>
+                  <p class="ad-para"><b> Some of the best clubs and committees at NITRR are E-CELL, ROBOTICS, SAHYOG,
+                      SHAURYA, innovation cell, nrityam and many more.. Sahyog club organizes variety of ...</b>
+                    <br><button class="ad-button"><a href="http://www.nitrr.ac.in/stu_club.php"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="ad-card image-8">
+                <div class="ad-content">
+                  <h3 class="ad-head">Shilpi</h3>
+                  <p class="ad-para"><b>Shilpi is an annual magazine of literary committee of NITRR.
+                    </b> <br><button class="ad-button"><a href="http://www.nitrr.ac.in/shilpi.php"
+                        target="_blank">More--></a></button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- 
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+
+              <div class="row">
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1" style="">
+                    <h1 class="NewHead" style="background:#26aae1;color:white; "><i class="fa fa-bullhorn"
+                        style="background:#26aae1;color:white; " aria-hidden="true"></i>achivements</h1>
+                        <div style="height: 300px;" class = "card-cotainer">
+                          <div class = "card image1">
+                            <div class = "descriptionc">
+                              <h3 class="headi"> <b>achivements</b> </h3>
+                            <p style="height: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pariatur veritatis, facilis, magnam dicta quia iste <br><br> <button class="t"><b> show more</b> </button> </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1">
+                    <h1 class="NewHead" style="background:#fcb040;color:white; "><i class="fa fa-bars"
+                        style="background:#fcb040;color:white; " aria-hidden="true"></i>research news letter</h1>
+                        <div style="height: 300px;" class = "card-cotainer">
+                          <div class = "card image2">
+                            <div class = "descriptionc">
+                              <h3 class="headi"> <b>research news letter</b> </h3>
+                             <p style="height: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pariatur veritatis, facilis, magnam dicta quia iste <br><br> <button class="t"><b> show more</b> </button> </p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1">
+                    <div class="NewHead" style="background:#f26521;color:white; "><i class="fa fa-calendar-check-o"
+                        style="background:#f26521;color:white; " aria-hidden="true"></i>news letter</div>
+                        <div style="height: 300px;" class = "card-cotainer">
+                          <div class = "card image3">
+                            <div class = "descriptionc">
+                              <h3 class="headi"> <b>news letter</b> </h3>
+                             <p style="height: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pariatur veritatis, facilis, magnam dicta quia iste <br><br> <button class="t"><b> show more</b> </button> </p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1">
+                    <div class="NewHead" style="background:#52b554;color:white; "><i class="fa fa-users"
+                        style="background:#52b554;color:white; " aria-hidden="true"></i> scholar</div>
+                        <div style="height: 300px;" class = "card-cotainer">
+                          <div class = "card image4">
+                            <div class = "descriptionc">
+                             <h3 class="headi"> <b>scholar</b> </h3>
+                             <p style="height: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pariatur veritatis, facilis, magnam dicta quia iste <br><br> <button class="t" ><b> show more</b> </button> </p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+
+
+
+          </div>
+ -->
+
+
+
+
+          <!-- code by deepak and ashu -->
+
+
+
+
+
+
+
+          <div class="row" style="margin-top: 50px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+
+              <div class="row">
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1" style="">
+                    <h1 class="NewHead" style="background:#26aae1;color:white; "><i class="fa fa-bullhorn"
+                        style="background:#26aae1;color:white; " aria-hidden="true"></i>Announcement</h1>
+                    <script type="text/javascript">
+
+                      var iframesrc = "announcement.php"
+                      document.write('<iframe id="datamain" src="' + iframesrc + '" width="100%" height="280px" marginwidth="0" marginheight="0" hspace="0" vspace="0" 	frameborder="0" 	scrolling="no"></iframe>')
+
+                    </script><iframe id="datamain" src="./Ash_files/announcement.html" width="100%" height="280px"
+                      marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+
+                    <a href="javascript: void(0)" onclick="popup2(&#39;announcement.php&#39;)" class="read"
+                      style="margin-top:18px;">
+                      read more
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1">
+                    <h1 class="NewHead" style="background:#fcb040;color:white; "><i class="fa fa-bars"
+                        style="background:#fcb040;color:white; " aria-hidden="true"></i>Tender</h1>
+                    <script type="text/javascript">
+
+                      var iframesrc = "tender.php"
+                      document.write('<iframe id="datamain" src="' + iframesrc + '" width="100%" height="280px" marginwidth="0" marginheight="0" hspace="0" vspace="0" 	frameborder="0" 	scrolling="no"></iframe>')
+
+                    </script><iframe id="datamain" src="./Ash_files/tender.html" width="100%" height="280px"
+                      marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+
+                    <a href="javascript: void(0)" onclick="popup2(&#39;tender.php&#39;)" class="read"
+                      style="margin-top:18px;">
+                      read more
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1">
+                    <div class="NewHead" style="background:#f26521;color:white; "><i class="fa fa-calendar-check-o"
+                        style="background:#f26521;color:white; " aria-hidden="true"></i>Notice</div>
+                    <script type="text/javascript">
+
+                      var iframesrc = "notice2.php"
+                      document.write('<iframe id="datamain" src="' + iframesrc + '" width="100%" height="300px" marginwidth="0" marginheight="0" hspace="0" vspace="0"    frameborder="0"     scrolling="no"></iframe>')
+
+                    </script><iframe id="datamain" src="./Ash_files/notice2.html" width="100%" height="300px"
+                      marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+
+                    <a href="javascript: void(0)" onclick="popup2(&#39;notice2.php&#39;)" class="read">
+                      read more
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="HomeContentBox1">
+                    <div class="NewHead" style="background:#52b554;color:white; "><i class="fa fa-users"
+                        style="background:#52b554;color:white; " aria-hidden="true"></i> Events</div>
+                    <script type="text/javascript">
+
+                      var iframesrc = "conferences.php"
+                      document.write('<iframe id="datamain" src="' + iframesrc + '" width="100%" height="300px" marginwidth="0" marginheight="0" hspace="0" vspace="0"    frameborder="0"     scrolling="no"></iframe>')
+
+                    </script><iframe id="datamain" src="./Ash_files/conferences.html" width="100%" height="300px"
+                      marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+
+                    <a href="javascript: void(0)" onclick="popup2(&#39;conferences.php&#39;)" class="read">
+                      read more
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+        </div>
+      </main>
+
+
+    </div>
+    <!--************************************
+            Footer Start
+    *************************************-->
+    <footer id="footer" class="footer haslayout" style="margin-top:-90px;">
+
+      <div class="footermiddlebar">
+        <div class="container-fluid">
+          <div class="row">
+
+            <!--<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                            <div class="widget widgetcoursecategories">
+                                <div class="widgettitle">
+                                    <h3>Administration</h3>
+                                </div>
+                                <div class="widgetcontent">
+                                    <ul>
+                                        <li><a href="BOD.php"> Board of Governors</a></li>
+                                        <li><a href="director.php"> Director</a></li>
+                                        <li><a href="deans.php"> Deans</a></li>
+                                        <li><a href="registrar.php"> Registrar</a></li>
+                                        <li><a href="Senate.php"> Senate</a></li>
+                                       
+                                        <li><a href="finance.php"> Finance</a></li>
+                                        <li><a href="adminstaff.php"> Administrative Staff</a></li>
+                                        <li><a href="Committee.php"> Committees</a></li>
+                                        <li><a href="BAWC.php"> Building and Work Committee</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                           
+                            <div class="widget widgetcoursecategories">
+                                <br />
+                                <div class="widgettitle">
+                                    <h3>Academics</h3>
+                                </div>
+                                <div class="widgetcontent">
+                                    <ul>
+                                        <li><a href="ordinances.php"> Ordinances</a></li>
+                                        <li><a href="acad_calendar.php"> Academic Calender</a></li>
+                                        <li><a href="acad_notice.php"> Notices</a></li>
+                                        <li><a href="how_to_Apply.php"> How To Apply</a></li>
+                                        <li><a href="syllabus.php"> Syllabus & Scheme</a></li>
+                                        <li><a href="acad_calendar.php"> List of Holidays</a></li>
+                                        <li><a href="firstyear_schedule.php"> First Year Classes Schedule's</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>-->
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <div class="widget widgetcoursecategories">
+
+                <div class="widgetcontent">
+                  <ul>
+                    <li><a href="http://www.nitrr.ac.in/downloads/NIT%20Raipur%20at%20a%20Glance09112021.pdf">NIT Raipur
+                        at a Glance</a></li>
+                    <!-- <li><a href="downloads/NIT Raipur at a Glance.pdf">NIT Raipur at a Glance</a></li> -->
+
+                    <li><a href="http://libraryopac.nitrr.ac.in:8380/opac/" target="_new">Web OPAC</a></li>
+                    <!--<li><a href="http://imageserver.ebscohost.com/branding/testkm/nitraipur/nitraipursearchbox.html">Library Search Service</a></li>
+    <!--<li><a href="topper_list.php">Year wise topper list</a></li>-->
+                    <!-- <li><a href="fac_notice.php">Kakodkar Committee Report</a></li> -->
+                    <li><a href="http://www.nitrr.ac.in/ann_report.php">Annual Reports</a></li>
+                    <li><a href="http://www.nitrr.ac.in/Vision2030%20.php"
+                        style="padding-top: 3px;padding-bottom: 3px;">Vision 2030</a></li>
+                    <li><a href="http://www.nitrr.ac.in/UBA/index.html" target="_blank"
+                        style="padding-top: 3px;padding-bottom: 3px;">Unnat Bharat Abhiyan at NIT Raipur</a></li>
+                    <li><a href="http://www.nitrr.ac.in/mis_new.php">MIS</a></li>
+                    <li><a href="http://www.nitrr.ac.in/rtiact.php">RTI Act</a></li>
+                    <li><a href="http://www.nitrr.ac.in/downloads/hindi_fonts.rar">Hindi Font</a></li>
+                    <li><a href="http://www.nitrr.ac.in/mous.php">MOUs </a></li>
+                    <li><a href="http://www.nitrr.ac.in/teqip_3.php">TEQIP III </a></li>
+                    <!-- <li><a href="downloads/NIT RAIPUR Institute Profile.pdf" >Institute Profile</a></li> -->
+                    <!-- <li><a href="downloads/innovation_cell/Innovation_Cell.pdf">Innovation Cell</a></li> -->
+                    <!-- <li><a href="downloads/KYC.pdf">Know Your College</a></li> -->
+                    <li><a href="http://www.nitrr.ac.in/antiraggingcommittee.php">Anti-Ragging System</a></li>
+                    <li><a href="http://moocs.nitrr.ac.in/">MOOCs</a></li>
+                    <li><a href="http://www.nitrr.ac.in/shilpi.php">Shilpi</a></li>
+                    <li><a href="http://www.nitrr.ac.in/t&amp;c.php">Terms &amp; Condition</a></li>
+                    <li><a href="http://www.nitrr.ac.in/newsletter.php">NITRR Newsletter: MIRROR</a><a
+                        href="http://www.nitrr.ac.in/subscribe.php"> <u> click to subscribe </u></a></li>
+                    <li><a href="http://nitrr.ac.in/Researchnewsletter.php">Research Newsletter NIT Raipur</a></li>
+                    <li><a href="http://www.nitrr.ac.in/iiic.php" target="_blank">National and Industrial Collaboration
+                        cell</a></li>
+                    <li><a href="https://swayam.gov.in/">SWAYAM Free Online Education</a></li>
+                    <li><a href="http://www.nitrr.ac.in/nad.php">National Academic Depository (NAD)</a></li>
+                    <li><a href="http://www.nitrr.ac.in/yeartopperlist.php">Year Wise Toppers List</a></li>
+                    <!-- <li><a href="https://pledge.cvc.nic.in/" target="_blank">Integrity Pledge</a></li> -->
+                    <li><a href="http://www.nitrr.ac.in/downloads/pledge%20cert%2018.jpg" target="_blank">Pledge
+                        Certificate</a></li>
+                    <li><a href="http://search.ebscohost.com/login.aspx?profile=eds" style="color:white; ">NIT Raipur
+                        Library Discovery</a></li>
+
+                    <li><a href="http://www.nitrr.ac.in/NITstatutes.php" target="_blank">NIT Act, Statues and Office
+                        Memorandum</a></li>
+
+                    <li><a href="http://www.nitrr.ac.in/Alumni%20Awards.php" target="_blank">Institute Alumnus
+                        Awards</a></li>
+
+                    <li><a href="http://www.nitrr.ac.in/downloads/InstituteStartupPolicy_Final3.pdf"
+                        target="_blank">Institute Innovation and Start-up Policy</a></li>
+                    <li><a href="http://www.nitrr.ac.in/downloads/Covid%20E%20Book.pdf" style="color: white;"
+                        target="_blank">E-booklet on COVID-related Research &amp; Development works done by CFTIs <img
+                          border="0" src="./Ash_files/new6.gif" width="18" height="7"></a></li>
+                    <!-- <li><a href="https://csab.nic.in/" target="_blank">CSAB</a></li>
+ <li><a href="https://ccmt.admissions.nic.in/"target="_blank">CCMT</a></li>
+ <li><a href="https://www.nimcet.in/"  target="_blank">NIMCET</a></li> -->
+
+                    <!--<li><a href="developers.php">Web Team</a></li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="widget widgetcompanyinfo">
+                <div class="widgetcontent">
+                  <!-- <strong class="logo1"><a href="index.php" style="text-decoration:none;">National Institute of Technology  Raipur</a></strong> -->
+                  <span><a href="http://nitrr.ac.in/ariia.php" target="_blank"><img src="./Ash_files/ariia_logo.jpeg"
+                        class="img-thumbnail" width="150" height="106"></a></span>
+                  <!-- <div class="description">
+
+                                        </div>
+                                        <ul class="infolist">
+                                            <li>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <address>G.E. Road, Raipur,Chhatisgarh - 492010, INDIA</address>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                                <span>+91-771-2254200</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-fax" aria-hidden="true"></i>
+                                                <span> +91-771-2254600 </span>
+                                            </li>
+                                           <li> -->
+                  <!-- <a href="mailto:query@nitrr.ac.in"> -->
+                  <!--
+                                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                                    <span>GSTIN: 22AAAJN0643G1ZN</span>
+                                                </a>
+                                            </li>
+                                                    -->
+                  <!--  </ul> -->
+                  <!-- <ul class="socialicons">
+
+                                          <li class="linkedin"><a href="https://www.linkedin.com/school/national-institute-of-technology-raipur" title="linkedin account of Institute"><i class="fa fa-linkedin"></i></a></li>
+                                            <li class="facebook"><a href="https://www.facebook.com/nitrr.ac.in" title=""><i class="fa fa-facebook"></i></a></li>
+
+                                            <li class="facebook"><a href="https://www.facebook.com/mediacell.nitrr/" title="PMRC"><i class="fa fa-facebook"></i></a></li>
+
+
+
+                                            <li class="twitter"><a href="https://twitter.com/NITRR" target="new" title="Twitter account of Institute"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="youtube"><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_new" title="Youtube account of Institute"  ><i class="fa fa-youtube"></i></a></li>
+                                        </ul> -->
+
+                  <!--  <li class="googleplus"><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>-->
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footerbar">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="col-sm-6">
+                <span class="copyright">Copyright © 2018, National Institute of Technology Raipur, All Rights
+                  Reserved</span>
+              </div>
+              <div class="col-sm-3">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <span>GSTIN: 22AAAJN0643G1ZN</span>
+              </div>
+              <div class="col-sm-3">
+
+                <ul class="socialicons">
+
+                  <li class="linkedin"><a href="https://www.linkedin.com/school/national-institute-of-technology-raipur"
+                      title="linkedin account of Institute"><i class="fa fa-linkedin"></i></a></li>
+                  <li class="facebook"><a href="https://www.facebook.com/nitrr.ac.in" title=""><i
+                        class="fa fa-facebook"></i></a></li>
+
+                  <li class="facebook"><a href="https://www.facebook.com/mediacell.nitrr/" title="PMRC"><i
+                        class="fa fa-facebook"></i></a></li>
+
+
+
+                  <li class="twitter"><a href="https://twitter.com/NITRR" target="new"
+                      title="Twitter account of Institute"><i class="fa fa-twitter"></i></a></li>
+                  <li class="youtube"><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_new"
+                      title="Youtube account of Institute"><i class="fa fa-youtube"></i></a></li>
+
+                  <!--  <li class="googleplus"><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>-->
+                </ul>
+
+
+              </div>
+              <br>
+
+              <!--   <nav class="addnav">
+                                <ul>
+                                    <li><a href="javascript:void(0);">Privacy Policy</a></li>
+                                    <li><a href="javascript:void(0);">Term and Conditions</a></li>
+                                    <li><a href="javascript:void(0);">Contact</a></li>
+                                </ul>
+                            </nav>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!--************************************
+            Footer End
+    *************************************-->
+
+
+  </div>
+  <script>
+    $.(function () {
+      $(".dropdown").hover(
+        function () {
+          $('.dropdown-menu', this).stop(true, true).fadeIn("fast");
+          $(this).toggleClass('open');
+          $('b', this).toggleClass("caret caret-up");
+        },
+        function () {
+          $('.dropdown-menu', this).stop(true, true).fadeOut("fast");
+          $(this).toggleClass('open');
+          $('b', this).toggleClass("caret caret-up");
+        });
+    });
+
+
+  </script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./Ash_files/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="./Ash_files/jquery.min.js.download"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="./Ash_files/bootstrap.min.js.download"></script>
+  <script src="./Ash_files/g1.js.download"></script>
+  <script src="./Ash_files/g2.js.download"></script>
+  <script src="./Ash_files/g3.js.download"></script>
+  <script src="./Ash_files/g4.js.download"></script>
+  <script src="./Ash_files/jswin.js.download"></script>
+  <script src="./Ash_files/jquery.mobile.custom.min gallery.js.download"></script>
+  <script></script>
+  <script src="./Ash_files/jquery-2.1.4 gallery.js.download"></script>
+  <script src="./Ash_files/main gallery.js.download"></script>
+
+  <script src="./Ash_files/modernizr gallery.js.download"></script>
+
+  <script src="./Ash_files/snap.svg-min gallery.js.download"></script>
+  <script src="Ash_files/my.js"></script>
+
+
+
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Visitors #:</th>
+        <th>
+          <img src="./Ash_files/counter.php" title="" alt="" border="0">
+        </th>
+        <th>Last updated on:
+
+          01-09-2022 </th>
+      </tr>
+    </thead>
+  </table>
+  <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+    <div style="padding: 8px;">
+      <div>
+        <div class="logo"><img src="./Ash_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div>
+      </div>
+    </div>
+    <div class="top" style="padding: 8px; float: left; width: 100%;">
+      <h1 class="title gray">Original text</h1>
+    </div>
+    <div class="middle" style="padding: 8px;">
+      <div class="original-text"></div>
+    </div>
+    <div class="bottom" style="padding: 8px;">
+      <div class="activity-links"><span class="activity-link">Contribute a better translation</span><span
+          class="activity-link"></span></div>
+      <div class="started-activity-container">
+        <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+        <div class="activity-root"></div>
+      </div>
+    </div>
+    <div class="status-message" style="display: none;"></div>
+  </div>
+  <div class="goog-te-spinner-pos">
+    <div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px"
+        height="96px" viewBox="0 0 66 66">
+        <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
+        </circle>
+      </svg></div>
+  </div>
+</body>
+
+</html>
